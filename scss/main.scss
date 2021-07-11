@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+$main-txt-color: hsl(0, 0%, 100%);
+$light-red: hsl(353, 100%, 62%);
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  cursor: pointer;
+  background: none;
+  border: $main-txt-color 1px solid;
+  border-radius: 2.5rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  width: 12rem;
+  font-size: 1.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  color: $main-txt-color;
+
+  &-active {
+    background: $main-txt-color;
+    color: hsl(13, 100%, 72%);
+  }
+}
+
+.container {
+  padding: 5rem 3rem;
+}
+.logo {
+  width: 6.5rem;
+  height: 3.5rem;
+}
+
+#header {
+  background: hsl(353, 100%, 62%) 40% 50% url('../img/bg-pattern-intro.svg')
+    no-repeat;
+
+  height: 550px;
+  border-bottom-left-radius: 12rem;
+
+  // Navbar
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+
+    .hamburger {
+      width: 2.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  // Header Content
+  .header-content {
+    text-align: center;
+    padding: 8rem 2rem;
+    &-heading {
+      font-size: 3rem;
+      color: $main-txt-color;
+      font-family: 'Overpass', sans-serif;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    &-txt {
+      font-size: 1.6rem;
+      color: $main-txt-color;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 400;
+      margin-bottom: 4.5rem;
+    }
+  }
+}
+
+// Footer
+#footer {
+  background: hsl(240, 10%, 16%);
+  margin-top: 10rem;
+  border-top-right-radius: 12rem;
+
+  .footer-content {
+    text-align: center;
+
+    .logo {
+      margin-bottom: 3rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-size: 2rem;
+        padding: 2rem 0;
+        color: $main-txt-color;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+      }
+
+      a {
+        font-size: 1.8rem;
+        padding: 1rem;
+        color: hsl(240, 2%, 79%);
+        font-family: 'Overpass', sans-serif;
+      }
+    }
+  }
+}
+
+.big-screen {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  #header,
+  #footer {
+    display: none;
+  }
+
+  .big-screen {
+    display: block;
+    text-align: center;
+    font-size: 12rem;
+    padding: 5rem;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
