@@ -34,11 +34,15 @@ a {
 }
 
 .container {
-  padding: 5rem 3rem;
+  padding: 5rem 4rem;
 }
 .logo {
   width: 6.5rem;
   height: 3.5rem;
+}
+
+.txt-center {
+  text-align: center;
 }
 
 #header {
@@ -61,10 +65,10 @@ a {
 
   // Header Content
   .header-content {
-    text-align: center;
+    // text-align: center;
     padding: 8rem 2rem;
     &-heading {
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: $main-txt-color;
       font-family: 'Overpass', sans-serif;
       font-weight: 600;
@@ -80,6 +84,25 @@ a {
   }
 }
 
+main {
+  .section {
+    &-heading {
+      font-size: 2.4rem;
+      margin-top: 5rem;
+      font-family: 'Overpass', sans-serif;
+      color: hsl(208, 49%, 24%);
+    }
+  }
+
+  .ilus-img {
+    width: 100%;
+  }
+  p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+}
+
 // Footer
 #footer {
   background: hsl(240, 10%, 16%);
@@ -87,7 +110,7 @@ a {
   border-top-right-radius: 12rem;
 
   .footer-content {
-    text-align: center;
+    // text-align: center;
 
     .logo {
       margin-bottom: 3rem;
