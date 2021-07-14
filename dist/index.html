@@ -19,10 +19,82 @@
     <header class="header" id="header">
       <div class="container">
         <div class="navbar">
-          <img src="./img/logo.svg" alt="" class="logo" />
-          <img class="toggle hamburger" src="./img/icon-hamburger.svg" alt="" />
+          <a href=""><img src="./img/logo.svg" alt="" class="logo" /></a>
+
+          <nav class="hidden nav-container" id="nav-list">
+            <div class="nav-list">
+              <div>
+                <li class="nav-item">
+                  Product
+                  <span><img src="./img/icon-arrow-dark.svg" alt="" /></span>
+                </li>
+                <div id="toggle-menu" class="toggle-menu hidden">
+                  <div class="nav-item">
+                    <a href="">Contact</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="">Newsletter</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <li class="nav-item">
+                  Company
+                  <span><img src="./img/icon-arrow-dark.svg" alt="" /></span>
+                </li>
+                <div id="toggle-menu" class="toggle-menu hidden">
+                  <div class="nav-item">
+                    <a href="">Contact</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="">Newsletter</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-item">
+                <li class="nav-item">
+                  Connect
+                  <span><img src="./img/icon-arrow-dark.svg" alt="" /></span>
+                </li>
+
+                <div id="toggle-menu" class="toggle-menu hidden">
+                  <div class="nav-item">
+                    <a href="">Contact</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="">Newsletter</a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="">LinkedIn</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border"></div>
+            <button class="btn btn-login">Login</button><br />
+            <button class="btn btn-sign btn-active">Sign Up</button>
+          </nav>
+
+          <div id="nav-toggle">
+            <img
+              class="menu-btn"
+              src="./img/icon-hamburger.svg"
+              id="hamburger"
+            />
+            <img
+              class="menu-btn hidden"
+              src="./img/icon-close.svg"
+              id="close"
+            />
+          </div>
         </div>
-        <div class="header-content txt-center">
+        <div class="header-content txt-align">
           <h1 class="header-content-heading m-b-1">
             A modern publishing platform.
           </h1>
@@ -36,10 +108,10 @@
     </header>
 
     <main>
-      <h1 class="section-heading txt-center m-t-4 m-b-1">
+      <h1 class="section-heading txt-align m-t-4 m-b-1">
         Designed for the future
       </h1>
-      <section class="container txt-center" id="section-a">
+      <section class="container txt-align txt-l" id="section-a">
         <div class="section-a">
           <img
             class="ilus-img"
@@ -73,7 +145,7 @@
         </div>
       </section>
 
-      <section class="container section-b txt-center" id="section-b">
+      <section class="container section-b txt-align" id="section-b">
         <div class="">
           <img class="ilus-img" src="./img/illustration-phones.svg" alt="" />
           <div class="section-content-txt">
@@ -92,7 +164,7 @@
         </div>
       </section>
 
-      <section class="container txt-center" id="section-c">
+      <section class="container txt-align" id="section-c">
         <div class="section-a-content">
           <img
             class="ilus-img"
@@ -126,7 +198,7 @@
     <!-- Footer -->
     <footer class="m-t-3" id="footer">
       <div class="container">
-        <div class="footer-content txt-center">
+        <div class="footer-content txt-align">
           <img src="./img/logo.svg" alt="" class="logo" />
 
           <div>
@@ -161,8 +233,6 @@
       </div>
     </footer>
 
-    <p class="big-screen">
-      Mobile Build In Process, Big screen update will come soon.
-    </p>
+    <script src="./js/script.js"></script>
   </body>
 </html>

@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 .btn {
   cursor: pointer;
   background: none;
@@ -41,7 +45,7 @@ a {
   height: 3.5rem;
 }
 
-.txt-center {
+.txt-align {
   text-align: center;
 }
 
@@ -115,6 +119,10 @@ a {
   }
 }
 
+.border {
+  border-top: 1.5px rgb(235, 235, 235) solid;
+}
+
 #header {
   background: hsl(353, 100%, 62%) 40% 50% url('../img/bg-pattern-intro.svg')
     no-repeat;
@@ -127,15 +135,59 @@ a {
     display: flex;
     justify-content: space-between;
 
-    .hamburger {
+    .showmenu {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 6rem;
+      border-radius: 5px;
+      box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
+    .hidden {
+      display: none;
+    }
+
+    .nav-container {
+      border-radius: 1rem;
+      width: 25rem;
+      text-align: center;
+      padding: 2rem;
+
+      .btn-login {
+        color: black;
+        border: none;
+      }
+
+      .nav-list {
+        .nav-item {
+          padding: 1.2rem;
+          font-size: 1.8rem;
+        }
+
+        .toggle-menu {
+          margin-top: 2rem;
+          background: rgb(241, 241, 241);
+          border-radius: 1rem;
+        }
+      }
+    }
+
+    .menu-btn {
       width: 2.5rem;
-      height: 1.5rem;
+      height: 2rem;
+      cursor: pointer;
+      padding-top: 0.8rem;
     }
   }
 
   // Header Content
   .header-content {
     padding: 8rem 1.6rem;
+
     &-heading {
       font-size: 2.9rem;
       color: $main-txt-color;
@@ -219,18 +271,24 @@ main {
   display: none;
 }
 
-@media screen and (min-width: 576px) {
-  #header,
-  #footer,
-  main {
+@media screen and (min-width: 1100px) {
+  .menu-btn {
     display: none;
   }
 
-  .big-screen {
-    display: block;
-    text-align: center;
-    font-size: 12rem;
-    padding: 5rem;
+  .txt-align {
+    text-align: left;
+  }
+  .section {
+    &-a {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-left: 8rem;
+    }
+
+    &-content-txt {
+      padding: 5rem;
+    }
   }
 }
 .attribution {

@@ -8,6 +8,9 @@
 a {
   text-decoration: none; }
 
+li {
+  list-style: none; }
+
 .btn {
   cursor: pointer;
   background: none;
@@ -31,7 +34,7 @@ a {
   width: 6.5rem;
   height: 3.5rem; }
 
-.txt-center {
+.txt-align {
   text-align: center; }
 
 .m-1 {
@@ -94,6 +97,9 @@ a {
 .m-tb-5 {
   margin: 15rem 0; }
 
+.border {
+  border-top: 1.5px #ebebeb solid; }
+
 #header {
   background: #ff3d54 40% 50% url("../img/bg-pattern-intro.svg") no-repeat;
   height: 550px;
@@ -101,9 +107,38 @@ a {
   #header .navbar {
     display: flex;
     justify-content: space-between; }
-    #header .navbar .hamburger {
+    #header .navbar .showmenu {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 6rem;
+      border-radius: 5px;
+      box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+      z-index: 10; }
+    #header .navbar .hidden {
+      display: none; }
+    #header .navbar .nav-container {
+      border-radius: 1rem;
+      width: 25rem;
+      text-align: center;
+      padding: 2rem; }
+      #header .navbar .nav-container .btn-login {
+        color: black;
+        border: none; }
+      #header .navbar .nav-container .nav-list .nav-item {
+        padding: 1.2rem;
+        font-size: 1.8rem; }
+      #header .navbar .nav-container .nav-list .toggle-menu {
+        margin-top: 2rem;
+        background: #f1f1f1;
+        border-radius: 1rem; }
+    #header .navbar .menu-btn {
       width: 2.5rem;
-      height: 1.5rem; }
+      height: 2rem;
+      cursor: pointer;
+      padding-top: 0.8rem; }
   #header .header-content {
     padding: 8rem 1.6rem; }
     #header .header-content-heading {
@@ -163,15 +198,16 @@ main .section-b {
 .big-screen {
   display: none; }
 
-@media screen and (min-width: 576px) {
-  #header,
-  #footer,
-  main {
+@media screen and (min-width: 1100px) {
+  .menu-btn {
     display: none; }
-  .big-screen {
-    display: block;
-    text-align: center;
-    font-size: 12rem;
+  .txt-align {
+    text-align: left; }
+  .section-a {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 8rem; }
+  .section-content-txt {
     padding: 5rem; } }
 
 .attribution {
