@@ -1,3 +1,4 @@
+@import 'utilities';
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
@@ -19,21 +20,34 @@ li {
 }
 
 .btn {
-  cursor: pointer;
-  background: none;
-  border: $main-txt-color 1px solid;
-  border-radius: 2.5rem;
-  padding: 1rem;
-  margin: 0.5rem;
-  width: 12rem;
-  font-size: 1.5rem;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 500;
-  color: $main-txt-color;
+  &-main {
+    @extend %btn-shared;
+    color: $main-txt-color;
+    border: $main-txt-color 1px solid;
 
-  &-active {
-    background: $main-txt-color;
-    color: hsl(13, 100%, 72%);
+    &-active {
+      background: $main-txt-color;
+      color: hsl(13, 100%, 72%);
+    }
+
+    &:hover {
+      background: $main-txt-color;
+      color: hsl(13, 100%, 72%);
+    }
+  }
+  &-primary {
+    @extend %btn-shared;
+    color: rgb(143, 143, 143);
+    border: none;
+
+    &-active {
+      color: $main-txt-color;
+      background: hsl(13, 100%, 72%);
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -49,77 +63,8 @@ li {
   text-align: center;
 }
 
-.m {
-  &-1 {
-    margin: 3rem;
-  }
-  &-2 {
-    margin: 5rem;
-  }
-  &-3 {
-    margin: 7rem;
-  }
-  &-4 {
-    margin: 10rem;
-  }
-  &-5 {
-    margin: 15rem;
-  }
-
-  &-t {
-    &-1 {
-      margin-top: 3rem;
-    }
-    &-2 {
-      margin-top: 5rem;
-    }
-    &-3 {
-      margin-top: 7rem;
-    }
-    &-4 {
-      margin-top: 10rem;
-    }
-    &-5 {
-      margin-top: 15rem;
-    }
-  }
-  &-b {
-    &-1 {
-      margin-bottom: 3rem;
-    }
-    &-2 {
-      margin-bottom: 5rem;
-    }
-    &-3 {
-      margin-bottom: 7rem;
-    }
-    &-4 {
-      margin-bottom: 10rem;
-    }
-    &-5 {
-      margin-bottom: 15rem;
-    }
-  }
-  &-tb {
-    &-1 {
-      margin: 3rem 0;
-    }
-    &-2 {
-      margin: 5rem 0;
-    }
-    &-3 {
-      margin: 7rem 0;
-    }
-    &-4 {
-      margin: 10rem 0;
-    }
-    &-5 {
-      margin: 15rem 0;
-    }
-  }
-}
-
 .border {
+  margin-top: 2rem;
   border-top: 1.5px rgb(235, 235, 235) solid;
 }
 
@@ -157,19 +102,31 @@ li {
       text-align: center;
       padding: 2rem;
 
-      .btn-login {
-        color: black;
-        border: none;
-      }
-
       .nav-list {
         .nav-item {
           padding: 1.2rem;
-          font-size: 1.8rem;
+          font-size: 1.6rem;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
 
+        .arrow-rot {
+          transform: rotate(180deg);
+        }
+
+        a {
+          font-size: 1.6rem;
+          line-height: 2;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
         .toggle-menu {
-          margin-top: 2rem;
+          margin-top: 0;
           background: rgb(241, 241, 241);
           border-radius: 1rem;
         }

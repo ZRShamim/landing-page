@@ -28,7 +28,7 @@
                   Product
                   <span><img src="./img/icon-arrow-dark.svg" alt="" /></span>
                 </li>
-                <div id="toggle-menu" class="toggle-menu hidden">
+                <div class="hidden">
                   <div class="nav-item">
                     <a href="">Contact</a>
                   </div>
@@ -45,9 +45,9 @@
                   Company
                   <span><img src="./img/icon-arrow-dark.svg" alt="" /></span>
                 </li>
-                <div id="toggle-menu" class="toggle-menu hidden">
-                  <div class="nav-item">
-                    <a href="">Contact</a>
+                <div class="hidden">
+                  <div>
+                    <a class="nav-item" href="">Contact</a>
                   </div>
                   <div class="nav-item">
                     <a href="">Newsletter</a>
@@ -57,28 +57,33 @@
                   </div>
                 </div>
               </div>
-              <div class="nav-item">
-                <li class="nav-item">
+              <div>
+                <li class="nav-item" id="toggle">
                   Connect
-                  <span><img src="./img/icon-arrow-dark.svg" alt="" /></span>
+                  <img
+                    class=""
+                    id="arrow"
+                    src="./img/icon-arrow-dark.svg"
+                    alt=""
+                  />
                 </li>
 
                 <div id="toggle-menu" class="toggle-menu hidden">
-                  <div class="nav-item">
-                    <a href="">Contact</a>
+                  <div>
+                    <a class="nav-items" href="">Contact</a>
                   </div>
-                  <div class="nav-item">
-                    <a href="">Newsletter</a>
+                  <div>
+                    <a class="nav-items" href="">Newsletter</a>
                   </div>
-                  <div class="nav-item">
-                    <a href="">LinkedIn</a>
+                  <div>
+                    <a class="nav-items" href="">LinkedIn</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="border"></div>
-            <button class="btn btn-login">Login</button><br />
-            <button class="btn btn-sign btn-active">Sign Up</button>
+            <button class="btn-primary" id="btn-login">Login</button><br />
+            <button class="btn-primary" id="btn-sign">Sign Up</button>
           </nav>
 
           <div id="nav-toggle">
@@ -101,8 +106,8 @@
           <p class="txt header-content-txt m-b-2">
             Grow your audience and build your online brand.
           </p>
-          <button class="btn">Start for Free</button>
-          <button class="btn btn-active">Learn More</button>
+          <button class="btn-main" id="btn-free">Start for Free</button>
+          <button class="btn-main" id="btn-learn">Learn More</button>
         </div>
       </div>
     </header>

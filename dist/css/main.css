@@ -1,42 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  font-size: 10px; }
-
-a {
-  text-decoration: none; }
-
-li {
-  list-style: none; }
-
-.btn {
-  cursor: pointer;
-  background: none;
-  border: white 1px solid;
-  border-radius: 2.5rem;
-  padding: 1rem;
-  margin: 0.5rem;
-  width: 12rem;
-  font-size: 1.5rem;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 500;
-  color: white; }
-  .btn-active {
-    background: white;
-    color: #ff8f70; }
-
-.container {
-  padding: 3rem 4rem; }
-
-.logo {
-  width: 6.5rem;
-  height: 3.5rem; }
-
-.txt-align {
-  text-align: center; }
-
 .m-1 {
   margin: 3rem; }
 
@@ -97,7 +60,119 @@ li {
 .m-tb-5 {
   margin: 15rem 0; }
 
+.p-1 {
+  padding: 3rem; }
+
+.p-2 {
+  padding: 5rem; }
+
+.p-3 {
+  padding: 7rem; }
+
+.p-4 {
+  padding: 10rem; }
+
+.p-5 {
+  padding: 15rem; }
+
+.p-t-1 {
+  padding-top: 3rem; }
+
+.p-t-2 {
+  padding-top: 5rem; }
+
+.p-t-3 {
+  padding-top: 7rem; }
+
+.p-t-4 {
+  padding-top: 10rem; }
+
+.p-t-5 {
+  padding-top: 15rem; }
+
+.p-b-1 {
+  padding-bottom: 3rem; }
+
+.p-b-2 {
+  padding-bottom: 5rem; }
+
+.p-b-3 {
+  padding-bottom: 7rem; }
+
+.p-b-4 {
+  padding-bottom: 10rem; }
+
+.p-b-5 {
+  padding-bottom: 15rem; }
+
+.p-tb-1 {
+  padding: 3rem 0; }
+
+.p-tb-2 {
+  padding: 5rem 0; }
+
+.p-tb-3 {
+  padding: 7rem 0; }
+
+.p-tb-4 {
+  padding: 10rem 0; }
+
+.p-tb-5 {
+  padding: 15rem 0; }
+
+.btn-main, .btn-primary {
+  cursor: pointer;
+  background: none;
+  border-radius: 2.5rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  width: 12rem;
+  font-size: 1.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500; }
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 10px; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.btn-main {
+  color: white;
+  border: white 1px solid; }
+  .btn-main-active {
+    background: white;
+    color: #ff8f70; }
+  .btn-main:hover {
+    background: white;
+    color: #ff8f70; }
+
+.btn-primary {
+  color: #8f8f8f;
+  border: none; }
+  .btn-primary-active {
+    color: white;
+    background: #ff8f70; }
+  .btn-primary:hover {
+    text-decoration: underline; }
+
+.container {
+  padding: 3rem 4rem; }
+
+.logo {
+  width: 6.5rem;
+  height: 3.5rem; }
+
+.txt-align {
+  text-align: center; }
+
 .border {
+  margin-top: 2rem;
   border-top: 1.5px #ebebeb solid; }
 
 #header {
@@ -124,14 +199,21 @@ li {
       width: 25rem;
       text-align: center;
       padding: 2rem; }
-      #header .navbar .nav-container .btn-login {
-        color: black;
-        border: none; }
       #header .navbar .nav-container .nav-list .nav-item {
         padding: 1.2rem;
-        font-size: 1.8rem; }
+        font-size: 1.6rem;
+        cursor: pointer; }
+        #header .navbar .nav-container .nav-list .nav-item:hover {
+          text-decoration: underline; }
+      #header .navbar .nav-container .nav-list .arrow-rot {
+        transform: rotate(180deg); }
+      #header .navbar .nav-container .nav-list a {
+        font-size: 1.6rem;
+        line-height: 2; }
+        #header .navbar .nav-container .nav-list a:hover {
+          text-decoration: underline; }
       #header .navbar .nav-container .nav-list .toggle-menu {
-        margin-top: 2rem;
+        margin-top: 0;
         background: #f1f1f1;
         border-radius: 1rem; }
     #header .navbar .menu-btn {
