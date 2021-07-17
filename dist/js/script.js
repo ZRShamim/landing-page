@@ -23,16 +23,22 @@ openclose.addEventListener('click', () => {
 // submenu
 toggle1.addEventListener('click', () => {
   document.getElementById('toggle-menu-1').classList.toggle('hidden');
+  document.getElementById('toggle-menu-2').classList.add('hidden');
+  document.getElementById('toggle-menu-3').classList.add('hidden');
   // arrowRotation.classList.toggle('arrow-rot');
 });
 
 toggle2.addEventListener('click', () => {
   document.getElementById('toggle-menu-2').classList.toggle('hidden');
+  document.getElementById('toggle-menu-1').classList.add('hidden');
+  document.getElementById('toggle-menu-3').classList.add('hidden');
   // arrowRotation.classList.toggle('arrow-rot');
 });
 
 toggle3.addEventListener('click', () => {
   document.getElementById('toggle-menu-3').classList.toggle('hidden');
+  document.getElementById('toggle-menu-1').classList.add('hidden');
+  document.getElementById('toggle-menu-2').classList.add('hidden');
   // arrowRotation.classList.toggle('arrow-rot');
 });
 

@@ -114,6 +114,10 @@ li {
       .item {
         font-size: 1.6rem;
         padding: 1.3rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       .arrow-rot {
@@ -154,6 +158,7 @@ li {
   // Header Content
   .header-content {
     padding: 8rem 1.6rem;
+    text-align: center;
 
     &-heading {
       font-size: 2.9rem;
@@ -171,10 +176,15 @@ li {
 }
 
 main {
-  .section-heading {
+  .section-heading,
+  .main-heading {
     font-size: 2.8rem;
     font-family: 'Overpass', sans-serif;
     color: hsl(208, 49%, 24%);
+  }
+
+  .main-heading {
+    text-align: center;
   }
 
   .ilus-img {
@@ -239,6 +249,17 @@ main {
 }
 
 @media screen and (min-width: 900px) {
+  .btn-primary {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    width: 8rem;
+
+    &:hover {
+      background: none;
+    }
+  }
+
   #header {
     .navbar {
       justify-content: space-around;
@@ -253,19 +274,29 @@ main {
         padding: 0;
         position: static;
         background: none;
+        img {
+          padding-top: 0;
+        }
+
+        .nav-list {
+          display: flex;
+          padding: 1rem 0;
+
+          .menu-name {
+            .nav-item {
+              padding: 0;
+              margin: 0 8rem 0 0;
+              color: whitesmoke;
+              width: 9rem;
+            }
+
+            img {
+              display: none;
+            }
+          }
+        }
       }
 
-      .nav-list {
-        display: flex;
-        padding: 1rem;
-
-        .nav-item {
-          padding: 0 2rem;
-        }
-        .toggle-menu {
-          position: absolute;
-        }
-      }
       .nav-btn {
         display: flex;
       }
@@ -273,10 +304,24 @@ main {
       .nav-btn-hidden {
         display: none;
       }
+
+      .toggle-menu {
+        position: absolute;
+        top: 7rem;
+        width: 15rem;
+      }
     }
 
     #nav-toggle {
       display: none;
+    }
+
+    .header-content {
+      margin-top: 7.5rem;
+
+      &-heading {
+        font-size: 4.5rem;
+      }
     }
   }
 
@@ -289,16 +334,36 @@ main {
   }
   .section {
     &-a {
-      display: flex;
-      flex-direction: row-reverse;
-      margin-left: 8rem;
+      margin-bottom: 3rem;
+
+      .section-content-txt {
+        width: 50%;
+      }
+
+      .ilus-img {
+        position: absolute;
+        right: -125px;
+        top: 650px;
+        width: 700px;
+      }
     }
 
     &-content-txt {
       padding: 5rem;
     }
+
+    &-b {
+      display: flex;
+      align-items: center;
+      height: 300px;
+    }
+
+    &-c {
+      display: flex;
+    }
   }
 }
+
 .attribution {
   font-size: 11px;
   text-align: center;

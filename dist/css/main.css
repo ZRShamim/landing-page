@@ -255,6 +255,8 @@ li {
       #header .navbar .nav-container .item {
         font-size: 1.6rem;
         padding: 1.3rem; }
+        #header .navbar .nav-container .item:hover {
+          text-decoration: underline; }
       #header .navbar .nav-container .arrow-rot {
         transform: rotate(180deg); }
     #header .navbar .show-menu {
@@ -276,7 +278,8 @@ li {
     #header .navbar .nav-btn {
       display: none; }
   #header .header-content {
-    padding: 8rem 1.6rem; }
+    padding: 8rem 1.6rem;
+    text-align: center; }
     #header .header-content-heading {
       font-size: 2.9rem;
       color: white;
@@ -288,10 +291,14 @@ li {
       font-family: 'Overpass', sans-serif;
       font-weight: 400; }
 
-main .section-heading {
+main .section-heading,
+main .main-heading {
   font-size: 2.8rem;
   font-family: 'Overpass', sans-serif;
   color: #1f3f5b; }
+
+main .main-heading {
+  text-align: center; }
 
 main .ilus-img {
   width: 100%; }
@@ -335,6 +342,13 @@ main .section-b {
   display: none; }
 
 @media screen and (min-width: 900px) {
+  .btn-primary {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    width: 8rem; }
+    .btn-primary:hover {
+      background: none; }
   #header .navbar {
     justify-content: space-around; }
     #header .navbar .border {
@@ -346,29 +360,53 @@ main .section-b {
       padding: 0;
       position: static;
       background: none; }
-    #header .navbar .nav-list {
-      display: flex;
-      padding: 1rem; }
-      #header .navbar .nav-list .nav-item {
-        padding: 0 2rem; }
-      #header .navbar .nav-list .toggle-menu {
-        position: absolute; }
+      #header .navbar .nav-container img {
+        padding-top: 0; }
+      #header .navbar .nav-container .nav-list {
+        display: flex;
+        padding: 1rem 0; }
+        #header .navbar .nav-container .nav-list .menu-name .nav-item {
+          padding: 0;
+          margin: 0 8rem 0 0;
+          color: whitesmoke;
+          width: 9rem; }
+        #header .navbar .nav-container .nav-list .menu-name img {
+          display: none; }
     #header .navbar .nav-btn {
       display: flex; }
     #header .navbar .nav-btn-hidden {
       display: none; }
+    #header .navbar .toggle-menu {
+      position: absolute;
+      top: 7rem;
+      width: 15rem; }
   #header #nav-toggle {
     display: none; }
+  #header .header-content {
+    margin-top: 7.5rem; }
+    #header .header-content-heading {
+      font-size: 4.5rem; }
   .menu-btn {
     display: none; }
   .txt-align {
     text-align: left; }
   .section-a {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-left: 8rem; }
+    margin-bottom: 3rem; }
+    .section-a .section-content-txt {
+      width: 50%; }
+    .section-a .ilus-img {
+      position: absolute;
+      right: -125px;
+      top: 650px;
+      width: 700px; }
   .section-content-txt {
-    padding: 5rem; } }
+    padding: 5rem; }
+  .section-b {
+    display: flex;
+    align-items: center;
+    height: 300px; }
+  .section-c {
+    display: flex; } }
 
 .attribution {
   font-size: 11px;
