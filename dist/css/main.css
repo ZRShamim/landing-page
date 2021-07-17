@@ -60,6 +60,51 @@
 .m-tb-5 {
   margin: 15rem 0; }
 
+.m-l-1 {
+  margin-left: 3rem; }
+
+.m-l-2 {
+  margin-left: 5rem; }
+
+.m-l-3 {
+  margin-left: 7rem; }
+
+.m-l-4 {
+  margin-left: 10rem; }
+
+.m-l-5 {
+  margin-left: 15rem; }
+
+.m-r-1 {
+  margin-right: 3rem; }
+
+.m-r-2 {
+  margin-right: 5rem; }
+
+.m-r-3 {
+  margin-right: 7rem; }
+
+.m-r-4 {
+  margin-right: 10rem; }
+
+.m-r-5 {
+  margin-right: 15rem; }
+
+.m-lr-1 {
+  margin: 0 3rem; }
+
+.m-lr-2 {
+  margin: 0 5rem; }
+
+.m-lr-3 {
+  margin: 0 7rem; }
+
+.m-lr-4 {
+  margin: 0 10rem; }
+
+.m-lr-5 {
+  margin: 0 15rem; }
+
 .p-1 {
   padding: 3rem; }
 
@@ -155,10 +200,9 @@ li {
 .btn-primary {
   color: #8f8f8f;
   border: none; }
-  .btn-primary-active {
-    color: white;
-    background: #ff8f70; }
   .btn-primary:hover {
+    color: white;
+    background: #ff8f70;
     text-decoration: underline; }
 
 .container {
@@ -182,45 +226,55 @@ li {
   #header .navbar {
     display: flex;
     justify-content: space-between; }
-    #header .navbar .showmenu {
+    #header .navbar .nav-container {
+      display: flex;
+      flex-direction: column;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      padding: 6rem;
-      border-radius: 5px;
-      box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-      z-index: 10; }
+      background: whitesmoke;
+      color: black;
+      text-align: center;
+      border-bottom-right-radius: 2rem;
+      border-top-left-radius: 2rem;
+      padding: 2rem 2rem;
+      width: 30rem;
+      top: 10rem;
+      right: 5%; }
+      #header .navbar .nav-container .menu-name {
+        display: flex;
+        justify-content: center; }
+        #header .navbar .nav-container .menu-name img {
+          width: 1rem;
+          height: 1rem;
+          padding-top: 2rem; }
+        #header .navbar .nav-container .menu-name .nav-item {
+          padding: 1.2rem;
+          font-size: 1.8rem;
+          cursor: pointer; }
+          #header .navbar .nav-container .menu-name .nav-item:hover {
+            text-decoration: underline; }
+      #header .navbar .nav-container .item {
+        font-size: 1.6rem;
+        padding: 1.3rem; }
+      #header .navbar .nav-container .arrow-rot {
+        transform: rotate(180deg); }
+    #header .navbar .show-menu {
+      display: none; }
+    #header .navbar .toggle-menu {
+      display: flex;
+      flex-direction: column;
+      background: #ececec;
+      border-radius: 15px; }
+      #header .navbar .toggle-menu a {
+        color: #0a1d38; }
     #header .navbar .hidden {
       display: none; }
-    #header .navbar .nav-container {
-      border-radius: 1rem;
-      width: 25rem;
-      text-align: center;
-      padding: 2rem; }
-      #header .navbar .nav-container .nav-list .nav-item {
-        padding: 1.2rem;
-        font-size: 1.6rem;
-        cursor: pointer; }
-        #header .navbar .nav-container .nav-list .nav-item:hover {
-          text-decoration: underline; }
-      #header .navbar .nav-container .nav-list .arrow-rot {
-        transform: rotate(180deg); }
-      #header .navbar .nav-container .nav-list a {
-        font-size: 1.6rem;
-        line-height: 2; }
-        #header .navbar .nav-container .nav-list a:hover {
-          text-decoration: underline; }
-      #header .navbar .nav-container .nav-list .toggle-menu {
-        margin-top: 0;
-        background: #f1f1f1;
-        border-radius: 1rem; }
     #header .navbar .menu-btn {
       width: 2.5rem;
       height: 2rem;
       cursor: pointer;
       padding-top: 0.8rem; }
+    #header .navbar .nav-btn {
+      display: none; }
   #header .header-content {
     padding: 8rem 1.6rem; }
     #header .header-content-heading {
@@ -280,7 +334,31 @@ main .section-b {
 .big-screen {
   display: none; }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 900px) {
+  #header .navbar {
+    justify-content: space-around; }
+    #header .navbar .border {
+      display: none; }
+    #header .navbar .show-menu {
+      display: flex; }
+    #header .navbar .nav-container {
+      flex-direction: row;
+      padding: 0;
+      position: static;
+      background: none; }
+    #header .navbar .nav-list {
+      display: flex;
+      padding: 1rem; }
+      #header .navbar .nav-list .nav-item {
+        padding: 0 2rem; }
+      #header .navbar .nav-list .toggle-menu {
+        position: absolute; }
+    #header .navbar .nav-btn {
+      display: flex; }
+    #header .navbar .nav-btn-hidden {
+      display: none; }
+  #header #nav-toggle {
+    display: none; }
   .menu-btn {
     display: none; }
   .txt-align {

@@ -20,71 +20,52 @@
       <div class="container">
         <div class="navbar">
           <a href=""><img src="./img/logo.svg" alt="" class="logo" /></a>
-
-          <nav class="hidden nav-container" id="nav-list">
+          <nav class="nav-container show-menu" id="nav-list">
             <div class="nav-list">
               <div>
-                <li class="nav-item">
-                  Product
-                  <span><img src="./img/icon-arrow-dark.svg" alt="" /></span>
-                </li>
-                <div class="hidden">
-                  <div class="nav-item">
-                    <a href="">Contact</a>
-                  </div>
-                  <div class="nav-item">
-                    <a href="">Newsletter</a>
-                  </div>
-                  <div class="nav-item">
-                    <a href="">LinkedIn</a>
-                  </div>
+                <div class="menu-name" id="toggle-1">
+                  <li class="nav-item">Product</li>
+                  <img src="./img/icon-arrow-dark.svg" alt="" />
+                </div>
+                <div id="toggle-menu-1" class="toggle-menu hidden">
+                  <a class="item" href="">Contact</a>
+                  <a class="item" href="">Newsletter</a>
+                  <a class="item" href="">LinkedIn</a>
                 </div>
               </div>
               <div>
-                <li class="nav-item">
-                  Company
-                  <span><img src="./img/icon-arrow-dark.svg" alt="" /></span>
-                </li>
-                <div class="hidden">
-                  <div>
-                    <a class="nav-item" href="">Contact</a>
-                  </div>
-                  <div class="nav-item">
-                    <a href="">Newsletter</a>
-                  </div>
-                  <div class="nav-item">
-                    <a href="">LinkedIn</a>
-                  </div>
+                <div class="menu-name" id="toggle-2">
+                  <li class="nav-item">Company</li>
+                  <img src="./img/icon-arrow-dark.svg" alt="" />
+                </div>
+                <div id="toggle-menu-2" class="toggle-menu hidden">
+                  <a class="item" href="">Contact</a>
+                  <a class="item" href="">Newsletter</a>
+                  <a class="item" href="">LinkedIn</a>
                 </div>
               </div>
               <div>
-                <li class="nav-item" id="toggle">
-                  Connect
-                  <img
-                    class=""
-                    id="arrow"
-                    src="./img/icon-arrow-dark.svg"
-                    alt=""
-                  />
-                </li>
-
-                <div id="toggle-menu" class="toggle-menu hidden">
-                  <div>
-                    <a class="nav-items" href="">Contact</a>
-                  </div>
-                  <div>
-                    <a class="nav-items" href="">Newsletter</a>
-                  </div>
-                  <div>
-                    <a class="nav-items" href="">LinkedIn</a>
-                  </div>
+                <div class="menu-name" id="toggle-3">
+                  <li class="nav-item">Connect</li>
+                  <img id="arrow" src="./img/icon-arrow-dark.svg" alt="" />
+                </div>
+                <div id="toggle-menu-3" class="toggle-menu hidden">
+                  <a class="item" href="">Contact</a>
+                  <a class="item" href="">Newsletter</a>
+                  <a class="item" href="">LinkedIn</a>
                 </div>
               </div>
             </div>
             <div class="border"></div>
-            <button class="btn-primary" id="btn-login">Login</button><br />
-            <button class="btn-primary" id="btn-sign">Sign Up</button>
+            <div class="nav-btn-hidden">
+              <button class="btn-primary" id="btn-login">Login</button><br />
+              <button class="btn-primary" id="btn-sign">Sign Up</button>
+            </div>
           </nav>
+          <div class="nav-btn">
+            <button class="btn-primary" id="btn-login">Login</button>
+            <button class="btn-primary" id="btn-sign">Sign Up</button>
+          </div>
 
           <div id="nav-toggle">
             <img
